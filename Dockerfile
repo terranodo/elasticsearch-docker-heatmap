@@ -32,7 +32,7 @@ RUN set -ex && for path in data logs config plugins config/scripts; do \
 RUN /opt/elasticsearch/bin/elasticsearch-plugin install \
 	file:///usr/src/downloads/elasticsearch-heatmap-5.1.1/build/distributions/aggs-geoheatmap-5.1.1-SNAPSHOT.zip
 
-# RUN rm -rf /usr/src/downloads
+RUN rm -rf /usr/src/downloads
 
 USER elasticsearch
 ENV PATH=$PATH:/opt/elasticsearch/bin
